@@ -70,10 +70,12 @@ angular.module('app')
 
                     return response;
                 });
+            var date = new Date();
+            date.setMonth(date.getMonth() - 1);
             $scope.date = getDateAsString(new Date());
             var activityParams = new Object({
                 "startDate": date.toISOString(),
-                "factSheetType": "services",
+                "factSheetType": "providers",
                 "eventType": "OBJECT_CHECK",
                 "countOnly": "1"
             });
