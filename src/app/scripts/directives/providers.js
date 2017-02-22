@@ -80,7 +80,7 @@ angular.module('app')
                 "countOnly": "1"
             });
 
-            ApiService.api('activities', activityParams)
+            ApiService.api('providers', activityParams)
                 .then(function (response) {
                     $scope.keyFigure2 = response.data.count;
                 });
