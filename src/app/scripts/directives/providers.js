@@ -54,7 +54,7 @@ angular.module('app')
 
                     var providerData = getProviderData(response.data);
                     $scope.keyFigure1 = providerData.count;
-                    
+
                     //$scope.keyFigure2 = "0 %";
                     $scope.nameKeyFigure1 = "Anzahl der Provider";
                     $scope.nameKeyFigure2 = "Vergleich zum Vormonat (der gleiche Stichtag)";
@@ -80,7 +80,7 @@ angular.module('app')
                 "countOnly": "1"
             });
 
-            ApiService.api('providers', activityParams)
+            ApiService.api('activities', activityParams)
                 .then(function (response) {
                     $scope.keyFigure2 = response.data.count;
                 });
